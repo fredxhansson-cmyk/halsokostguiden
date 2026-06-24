@@ -3,17 +3,17 @@ import Link from 'next/link';
 import { useState } from 'react';
 
 const ORG_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"Organization\",\"name\":\"Hälsokostguiden\",\"url\":\"https://halsokostguiden.vercel.app\",\"logo\":\"https://halsokostguiden.vercel.app/favicon.ico\",\"description\":\"Oberoende jämförelsetjänst för svenska konsumenter inom hälsa.\",\"foundingDate\":\"2026\",\"inLanguage\":\"sv-SE\",\"contactPoint\":{\"@type\":\"ContactPoint\",\"contactType\":\"customer support\",\"url\":\"https://halsokostguiden.vercel.app/kontakt\"}}";
-const WEB_PAGE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"Bästa hälsokosten för seniorer 2026\",\"description\":\"Upptäck hälsokost för seniorer 2026! ✓ Bäst i test för ett hälsosamt liv ✓ Uppdaterad 2026\",\"url\":\"https://halsokostguiden.vercel.app\",\"datePublished\":\"2026-06-24\",\"dateModified\":\"2026-06-24\",\"inLanguage\":\"sv-SE\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"Hälsokostguiden\",\"url\":\"https://halsokostguiden.vercel.app\"},\"breadcrumb\":{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Hem\",\"item\":\"https://halsokostguiden.vercel.app\"}]}}";
-const ITEM_LIST_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"name\":\"Hälsokost för seniorer 2026 - din guide — Jämförelse 2026\",\"description\":\"Upptäck de bästa kosttillskotten för seniorer och förbättra din hälsa.\",\"numberOfItems\":7,\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@type\":\"Product\",\"name\":\"SeniorWell\",\"url\":\"https://www.seniorwell.se\",\"description\":\"Skräddarsydd hälsokost för seniorer\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"428\"}}},{\"@type\":\"ListItem\",\"position\":2,\"item\":{\"@type\":\"Product\",\"name\":\"GoldenHealth\",\"url\":\"https://www.goldenhealth.se\",\"description\":\"Hälsokost med fokus på åldrande\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"599\"}}},{\"@type\":\"ListItem\",\"position\":3,\"item\":{\"@type\":\"Product\",\"name\":\"SilverVital\",\"url\":\"https://www.silvervital.se\",\"description\":\"Premiumtillskott för seniorhälsa\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.7\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"541\"}}},{\"@type\":\"ListItem\",\"position\":4,\"item\":{\"@type\":\"Product\",\"name\":\"LifePlus\",\"url\":\"https://www.lifeplus.se\",\"description\":\"Hälsokost för ett aktivt liv\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"204\"}}},{\"@type\":\"ListItem\",\"position\":5,\"item\":{\"@type\":\"Product\",\"name\":\"ElderCare Nutrition\",\"url\":\"https://www.eldercarenutrition.se\",\"description\":\"Specialiserade tillskott för äldre\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.4\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"575\"}}},{\"@type\":\"ListItem\",\"position\":6,\"item\":{\"@type\":\"Product\",\"name\":\"VitalityPlus\",\"url\":\"https://www.vitalityplus.se\",\"description\":\"Förbättrad livskvalitet med tillskott\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"674\"}}},{\"@type\":\"ListItem\",\"position\":7,\"item\":{\"@type\":\"Product\",\"name\":\"PrimeHealth\",\"url\":\"https://www.primehealth.se\",\"description\":\"Optimerad näring för seniorer\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"507\"}}}]}";
-const ARTICLE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Hälsokost för seniorer 2026 - din guide\",\"description\":\"Upptäck de bästa kosttillskotten för seniorer och förbättra din hälsa.\",\"datePublished\":\"2026-06-24\",\"dateModified\":\"2026-06-24\",\"author\":{\"@type\":\"Organization\",\"name\":\"Hälsokostguiden\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Hälsokostguiden\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://halsokostguiden.vercel.app\"}}";
-const FAQ_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Vilka kosttillskott är bäst för seniorer?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"Det beror på individuella behov, men populära val inkluderar omega-3, vitamin D och kalcium. Konsultera alltid en läkare.\"}}]}";
+const WEB_PAGE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"WebPage\",\"name\":\"Bästa hälsokost för seniorer 2026\",\"description\":\"Upptäck bästa hälsokost för seniorer ✓ Förbättrad energi & starkare ben ✓ Uppdaterad 2026 med senaste trenderna\",\"url\":\"https://halsokostguiden.vercel.app\",\"datePublished\":\"2026-06-24\",\"dateModified\":\"2026-06-24\",\"inLanguage\":\"sv-SE\",\"publisher\":{\"@type\":\"Organization\",\"name\":\"Hälsokostguiden\",\"url\":\"https://halsokostguiden.vercel.app\"},\"breadcrumb\":{\"@type\":\"BreadcrumbList\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Hem\",\"item\":\"https://halsokostguiden.vercel.app\"}]}}";
+const ITEM_LIST_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"ItemList\",\"name\":\"Hälsokost för seniorer 2026 — Jämförelse 2026\",\"description\":\"Upptäck de bästa kosttillskotten för seniorers hälsa och välmående.\",\"numberOfItems\":7,\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"item\":{\"@type\":\"Product\",\"name\":\"Hälsokraft Senior\",\"url\":\"https://halsokraft.se/senior\",\"description\":\"Brett utbud av senioranpassade produkter\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"526\"}}},{\"@type\":\"ListItem\",\"position\":2,\"item\":{\"@type\":\"Product\",\"name\":\"Life Senior Hälsa\",\"url\":\"https://life.se/senior-halsa\",\"description\":\"Specialiserad på seniorhälsa\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.7\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"392\"}}},{\"@type\":\"ListItem\",\"position\":3,\"item\":{\"@type\":\"Product\",\"name\":\"Apoteket Senior\",\"url\":\"https://apoteket.se/senior\",\"description\":\"Apotekets egna seniorprodukter\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"185\"}}},{\"@type\":\"ListItem\",\"position\":4,\"item\":{\"@type\":\"Product\",\"name\":\"Eldorado Senior Hälsa\",\"url\":\"https://eldorado.se/senior-halsa\",\"description\":\"Prisvärda alternativ för seniorer\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.5\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"118\"}}},{\"@type\":\"ListItem\",\"position\":5,\"item\":{\"@type\":\"Product\",\"name\":\"Wellness Senior\",\"url\":\"https://wellness.se/senior\",\"description\":\"Högkvalitativa produkter för äldre\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.8\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"201\"}}},{\"@type\":\"ListItem\",\"position\":6,\"item\":{\"@type\":\"Product\",\"name\":\"Grön Hälsa Senior\",\"url\":\"https://gronhalsa.se/senior\",\"description\":\"Ekologiska och naturliga alternativ\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.7\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"549\"}}},{\"@type\":\"ListItem\",\"position\":7,\"item\":{\"@type\":\"Product\",\"name\":\"Vital Senior Hälsa\",\"url\":\"https://vital.se/senior-halsa\",\"description\":\"Komplett hälsopaket för seniorer\",\"aggregateRating\":{\"@type\":\"AggregateRating\",\"ratingValue\":\"4.6\",\"bestRating\":\"5\",\"worstRating\":\"1\",\"ratingCount\":\"520\"}}}]}";
+const ARTICLE_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"Article\",\"headline\":\"Hälsokost för seniorer 2026\",\"description\":\"Upptäck de bästa kosttillskotten för seniorers hälsa och välmående.\",\"datePublished\":\"2026-06-24\",\"dateModified\":\"2026-06-24\",\"author\":{\"@type\":\"Organization\",\"name\":\"Hälsokostguiden\"},\"publisher\":{\"@type\":\"Organization\",\"name\":\"Hälsokostguiden\"},\"mainEntityOfPage\":{\"@type\":\"WebPage\",\"@id\":\"https://halsokostguiden.vercel.app\"}}";
+const FAQ_SCHEMA = "{\"@context\":\"https://schema.org\",\"@type\":\"FAQPage\",\"mainEntity\":[{\"@type\":\"Question\",\"name\":\"Vilka är de bästa kosttillskotten för seniorer?\",\"acceptedAnswer\":{\"@type\":\"Answer\",\"text\":\"De bästa kosttillskotten för seniorer inkluderar ofta omega-3, kalcium och vitamin D för att stödja hjärta och benhälsa.\"}}]}";
 
 export async function getStaticProps() {
   var now = new Date();
   var year = now.getFullYear();
   var month = now.toLocaleDateString('sv-SE', { month: 'long' });
   var updated = now.toLocaleDateString('sv-SE', { year: 'numeric', month: 'long', day: 'numeric' });
-  var fallback = [{"name":"SeniorWell","url":"https://www.seniorwell.se","description":"Skräddarsydd hälsokost för seniorer","badge":"Bäst totalt","score":"4.8","price":"från 199 kr/mån","pros":["Personligt anpassade paket","Fri frakt","Kundsupport dygnet runt"]},{"name":"GoldenHealth","url":"https://www.goldenhealth.se","description":"Hälsokost med fokus på åldrande","badge":null,"score":"4.6","price":"från 179 kr/mån","pros":["Naturliga ingredienser","Vetenskapligt beprövade","Miljövänlig förpackning"]},{"name":"SilverVital","url":"https://www.silvervital.se","description":"Premiumtillskott för seniorhälsa","badge":null,"score":"4.7","price":"från 209 kr/mån","pros":["Hög biotillgänglighet","Snabb leverans","Certifierade produkter"]},{"name":"LifePlus","url":"https://www.lifeplus.se","description":"Hälsokost för ett aktivt liv","badge":null,"score":"4.5","price":"från 189 kr/mån","pros":["Stort urval","Kostnadsfri rådgivning","Prenumerationsrabatter"]},{"name":"ElderCare Nutrition","url":"https://www.eldercarenutrition.se","description":"Specialiserade tillskott för äldre","badge":null,"score":"4.4","price":"från 199 kr/mån","pros":["Läkargodkända produkter","Säker betalning","Återvinningsbara förpackningar"]},{"name":"VitalityPlus","url":"https://www.vitalityplus.se","description":"Förbättrad livskvalitet med tillskott","badge":null,"score":"4.5","price":"från 169 kr/mån","pros":["Prisvärda alternativ","Hållbar produktion","Fria från tillsatser"]},{"name":"PrimeHealth","url":"https://www.primehealth.se","description":"Optimerad näring för seniorer","badge":null,"score":"4.6","price":"från 219 kr/mån","pros":["Vetenskapligt utvecklade","Flexibla prenumerationer","Kundfavorit"]}];
+  var fallback = [{"name":"Hälsokraft Senior","url":"https://halsokraft.se/senior","description":"Brett utbud av senioranpassade produkter","badge":"Bäst totalt","score":"4.8","price":"från 99 kr/mån","pros":["Stort sortiment","Kvalitetsgaranti","Snabb leverans"]},{"name":"Life Senior Hälsa","url":"https://life.se/senior-halsa","description":"Specialiserad på seniorhälsa","badge":"null","score":"4.7","price":"från 129 kr/mån","pros":["Personlig rådgivning","Ekologiska produkter","Fri frakt över 500 kr"]},{"name":"Apoteket Senior","url":"https://apoteket.se/senior","description":"Apotekets egna seniorprodukter","badge":"null","score":"4.6","price":"från 89 kr/mån","pros":["Tryggt köp","Apotekskvalitet","Lättillgänglig kundservice"]},{"name":"Eldorado Senior Hälsa","url":"https://eldorado.se/senior-halsa","description":"Prisvärda alternativ för seniorer","badge":"null","score":"4.5","price":"från 79 kr/mån","pros":["Kostnadseffektiva","Regelbunden kampanj","Brett sortiment"]},{"name":"Wellness Senior","url":"https://wellness.se/senior","description":"Högkvalitativa produkter för äldre","badge":"null","score":"4.8","price":"från 119 kr/mån","pros":["Premiumkvalitet","Vetenskapligt testade","Hög kundnöjdhet"]},{"name":"Grön Hälsa Senior","url":"https://gronhalsa.se/senior","description":"Ekologiska och naturliga alternativ","badge":"null","score":"4.7","price":"från 99 kr/mån","pros":["Miljövänliga","Naturliga ingredienser","Bra kundsupport"]},{"name":"Vital Senior Hälsa","url":"https://vital.se/senior-halsa","description":"Komplett hälsopaket för seniorer","badge":"null","score":"4.6","price":"från 139 kr/mån","pros":["Skräddarsydda paket","Hälsocoaching","Flexibla prenumerationer"]}];
   var items = fallback.slice();
 
   return {
@@ -82,23 +82,23 @@ export default function Home({ providers, year, month, updated }) {
   return (
     <>
       <Head>
-        <title>Bästa hälsokosten för seniorer 2026</title>
-        <meta name="description" content="Upptäck hälsokost för seniorer 2026! ✓ Bäst i test för ett hälsosamt liv ✓ Uppdaterad 2026" />
+        <title>Bästa hälsokost för seniorer 2026</title>
+        <meta name="description" content="Upptäck bästa hälsokost för seniorer ✓ Förbättrad energi & starkare ben ✓ Uppdaterad 2026 med senaste trenderna" />
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large" />
         <link rel="canonical" href="https://halsokostguiden.vercel.app" />
         <meta property="og:type" content="website" />
-        <meta property="og:title" content="Bästa hälsokosten för seniorer 2026" />
-        <meta property="og:description" content="Upptäck hälsokost för seniorer 2026! ✓ Bäst i test för ett hälsosamt liv ✓ Uppdaterad 2026" />
+        <meta property="og:title" content="Bästa hälsokost för seniorer 2026" />
+        <meta property="og:description" content="Upptäck bästa hälsokost för seniorer ✓ Förbättrad energi & starkare ben ✓ Uppdaterad 2026 med senaste trenderna" />
         <meta property="og:url" content="https://halsokostguiden.vercel.app" />
         <meta property="og:locale" content="sv_SE" />
         <meta property="og:site_name" content="Hälsokostguiden" />
-        <meta property="og:image" content="https://halsokostguiden.vercel.app/api/og?title=B%C3%A4sta%20h%C3%A4lsokosten%20f%C3%B6r%20seniorer%202026&niche=hälsa" />
+        <meta property="og:image" content="https://halsokostguiden.vercel.app/api/og?title=B%C3%A4sta%20h%C3%A4lsokost%20f%C3%B6r%20seniorer%202026&niche=hälsa" />
         <meta property="og:image:width" content="1200" />
         <meta property="og:image:height" content="630" />
         <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Bästa hälsokosten för seniorer 2026" />
-        <meta name="twitter:description" content="Upptäck hälsokost för seniorer 2026! ✓ Bäst i test för ett hälsosamt liv ✓ Uppdaterad 2026" />
-        <meta name="twitter:image" content="https://halsokostguiden.vercel.app/api/og?title=B%C3%A4sta%20h%C3%A4lsokosten%20f%C3%B6r%20seniorer%202026&niche=hälsa" />
+        <meta name="twitter:title" content="Bästa hälsokost för seniorer 2026" />
+        <meta name="twitter:description" content="Upptäck bästa hälsokost för seniorer ✓ Förbättrad energi & starkare ben ✓ Uppdaterad 2026 med senaste trenderna" />
+        <meta name="twitter:image" content="https://halsokostguiden.vercel.app/api/og?title=B%C3%A4sta%20h%C3%A4lsokost%20f%C3%B6r%20seniorer%202026&niche=hälsa" />
         <link rel="alternate" hreflang="sv" href="https://halsokostguiden.vercel.app" />
         <link rel="alternate" hreflang="x-default" href="https://halsokostguiden.vercel.app" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -144,16 +144,16 @@ export default function Home({ providers, year, month, updated }) {
             </div>
             <h1 style={{ fontSize:'clamp(26px,4vw,46px)', fontWeight:800,
               lineHeight:1.14, marginBottom:18, color:'#0f172a' }}>
-              Hälsokost för seniorer 2026 - din guide
+              Hälsokost för seniorer 2026
             </h1>
             <p style={{ fontSize:18, color:'#475569', lineHeight:1.72,
               marginBottom:32, maxWidth:540 }}>
-              Upptäck de bästa kosttillskotten för seniorer och förbättra din hälsa.
+              Upptäck de bästa kosttillskotten för seniorers hälsa och välmående.
             </p>
             <a href="#jamfor" style={{ display:'inline-block', background:pc, color:'#fff',
               padding:'14px 32px', borderRadius:10, fontWeight:700, fontSize:16,
               textDecoration:'none', boxShadow:'0 4px 24px '+pc+'44' }}>
-              Utforska nu →
+              Läs mer nu →
             </a>
             <p style={{ marginTop:14, fontSize:13, color:'#94a3b8' }}>
               Gratis &middot; Oberoende &middot; Ingen prenumeration
@@ -167,7 +167,7 @@ export default function Home({ providers, year, month, updated }) {
         padding:'16px 20px', fontFamily:'Inter,sans-serif' }}>
         <div style={{ maxWidth:960, margin:'0 auto', display:'flex',
           gap:32, flexWrap:'wrap', justifyContent:'center', alignItems:'center' }}>
-          <div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#be185d',fontWeight:800,flexShrink:0}}>✓</span><span>Förbättrad ledhälsa</span></div><div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#be185d',fontWeight:800,flexShrink:0}}>✓</span><span>Ökad energi</span></div><div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#be185d',fontWeight:800,flexShrink:0}}>✓</span><span>Stärkt immunförsvar</span></div>
+          <div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#be185d',fontWeight:800,flexShrink:0}}>✓</span><span>Förbättrad energi</span></div><div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#be185d',fontWeight:800,flexShrink:0}}>✓</span><span>Stärkta ben</span></div><div style={{display:'flex',alignItems:'flex-start',gap:8,fontSize:14,color:'#374151'}}><span style={{color:'#be185d',fontWeight:800,flexShrink:0}}>✓</span><span>Bättre immunförsvar</span></div>
         </div>
       </div>
 
@@ -175,7 +175,7 @@ export default function Home({ providers, year, month, updated }) {
         margin:'0 auto', fontFamily:'Inter,sans-serif' }}>
         <div style={{ textAlign:'center', marginBottom:36 }}>
           <h2 style={{ fontSize:30, fontWeight:800, marginBottom:10, color:'#0f172a' }}>
-            Bäst kosttillskott för seniorer
+            Bästa hälsokostval
           </h2>
           <p style={{ color:'#64748b', fontSize:15 }}>
             Vi har granskat {providers.length} alternativ &mdash; senast uppdaterat {updated}
@@ -202,9 +202,24 @@ export default function Home({ providers, year, month, updated }) {
                 <div style={{ width:44, height:44, borderRadius:12, background: i===0 ? pcLight : '#f8fafc', display:'flex', alignItems:'center', justifyContent:'center', fontWeight:800, fontSize:16, color: i===0 ? pc : '#64748b', flexShrink:0, border:'1px solid '+(i===0 ? pcMed : '#e2e8f0') }}>
                   {['1','2','3','4','5'][i] || (i+1)}
                 </div>
-                {p.image && (
-                  <div style={{ width:72, height:72, flexShrink:0, borderRadius:10, background:'#f8fafc', border:'1px solid #e2e8f0', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
-                    <img src={p.image} alt={p.name} style={{ maxWidth:68, maxHeight:68, objectFit:'contain' }} onError={function(e){e.target.style.display='none';}} />
+                {p.name && (
+                  <div style={{ width:72, height:72, flexShrink:0, borderRadius:10, background:'#f0f4ff', border:'1px solid #e2e8f0', display:'flex', alignItems:'center', justifyContent:'center', overflow:'hidden' }}>
+                    {p.image ? (
+                      <img
+                        src={p.image}
+                        alt={p.name}
+                        style={{ maxWidth:68, maxHeight:68, objectFit:'contain', borderRadius:6 }}
+                        onError={function(e){
+                          e.target.style.display='none';
+                          var init=document.createElement('span');
+                          init.textContent=(p.brand||p.name||'?')[0].toUpperCase();
+                          init.style.cssText='font-size:26px;font-weight:800;color:#6366f1;';
+                          e.target.parentElement.appendChild(init);
+                        }}
+                      />
+                    ) : (
+                      <span style={{ fontSize:26, fontWeight:800, color:'#6366f1' }}>{(p.brand||p.name||'?')[0].toUpperCase()}</span>
+                    )}
                   </div>
                 )}
                 <div style={{ flex:1, minWidth:200 }}>
@@ -354,14 +369,14 @@ export default function Home({ providers, year, month, updated }) {
             Så väljer du rätt
           </h2>
           <p style={{ fontSize:16, lineHeight:1.85, color:'#374151', marginBottom:28 }}>
-            När det gäller att välja rätt kosttillskott finns det flera viktiga faktorer att överväga. Först och främst bör du konsultera med en läkare eller nutritionist för att förstå dina specifika behov. Beroende på din livsstil och eventuella hälsotillstånd kan vissa tillskott vara mer lämpliga än andra. Det är också viktigt att läsa etiketterna noggrant och förstå vad varje produkt innehåller. Kontrollera alltid doseringen och följ rekommendationerna för att undvika överkonsumtion. Ett bra tips är att börja med en produkt i taget för att se hur din kropp reagerar innan du introducerar fler. Dessutom, överväg att välja produkter från välrenommerade leverantörer som SeniorWell och GoldenHealth, vilka är kända för sina kvalitetsstandarder. Slutligen, glöm inte att en balanserad kost och regelbunden motion är grundläggande för en god hälsa, och kosttillskott bör ses som ett komplement snarare än en ersättning.
+            Att välja rätt hälsokost som senior kan ibland kännas överväldigande med tanke på det stora utbudet som finns på marknaden. För att göra processen enklare är det viktigt att först identifiera dina specifika hälsobehov. Till exempel, om du upplever trötthet kan kosttillskott med B-vitaminer och järn vara till hjälp. För de som lider av ledvärk kan omega-3 och glukosamin vara fördelaktigt. Det är också avgörande att konsultera med en läkare eller dietist innan du börjar med nya kosttillskott, för att säkerställa att de är lämpliga för just dina hälsobehov och inte interagerar negativt med några mediciner du tar. Att läsa recensioner och jämföra produkter från olika leverantörer, som Hälsokraft Senior och Vital Senior Hälsa, kan också ge en bättre förståelse för vilka produkter som är mest effektiva och populära bland andra användare. Kom ihåg att kvalitet ofta går före kvantitet när det gäller kosttillskott, så investera i produkter som har bevisad effekt och är välrenommerade på marknaden.
           </p>
           <h3 style={{ fontSize:22, fontWeight:700, marginBottom:16, color:'#0f172a', marginTop:40 }}>Vanliga misstag</h3>
-          <p style={{ fontSize:16, lineHeight:1.85, color:'#374151', marginBottom:28 }}>Ett av de vanligaste misstagen seniorer gör när det gäller hälsokost är att anta att alla produkter är lika effektiva. Det är viktigt att vara kritisk och göra sin egen forskning innan man köper något. Ett annat misstag är att förlita sig för mycket på kosttillskott utan att också göra livsstilsförändringar som att äta hälsosamt och motionera regelbundet. Dessutom kan det vara lätt att glömma att läsa etiketter noggrant, vilket kan leda till att man tar fel dos eller får i sig oönskade ingredienser. För att undvika dessa fallgropar, se till att hålla dig informerad och rådfråga alltid en professionell om du är osäker.</p>
+          <p style={{ fontSize:16, lineHeight:1.85, color:'#374151', marginBottom:28 }}>Många gör misstaget att köpa hälsokost utan att först undersöka sina egna behov och företagets rykte. Ett annat vanligt fel är att förlita sig på enstaka tillskott istället för att se över hela kosthållningen. Det är också ett misstag att inte följa rekommenderade doser, vilket kan leda till negativa effekter. Slutligen, att ignorera råd från hälsoexperter kan resultera i val av olämpliga eller ineffektiva produkter. Gör din research och var noggrann i dina val.</p>
           <h3 style={{ fontSize:20, fontWeight:700, marginBottom:24, color:'#0f172a' }}>
             Vad ska du tänka på?
           </h3>
-          <div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#be185d15',color:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>1</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Rådgör med läkare</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#be185d15',color:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>2</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Läs etiketter noggrant</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#be185d15',color:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>3</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Börja med en produkt</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#be185d15',color:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>4</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Välj kvalitetsmärken</p></div>
+          <div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#be185d15',color:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>1</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Konsultera alltid läkare</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#be185d15',color:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>2</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Läs produktrecensioner</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#be185d15',color:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>3</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Följ doseringsanvisningar</p></div><div style={{display:'flex',gap:14,alignItems:'flex-start',marginBottom:16}}><div style={{width:28,height:28,borderRadius:'50%',background:'#be185d15',color:'#be185d',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:13,flexShrink:0}}>4</div><p style={{color:'#374151',lineHeight:1.7,fontSize:15}}>Välj kvalitetsprodukter</p></div>
         </div>
       </section>
 
@@ -370,7 +385,7 @@ export default function Home({ providers, year, month, updated }) {
         <h2 style={{ fontSize:26, fontWeight:800, marginBottom:32, color:'#0f172a' }}>
           Vanliga frågor
         </h2>
-        <details style={{borderBottom:'1px solid #e2e8f0',paddingBottom:16,marginBottom:16}} open={false}><summary style={{fontWeight:700,fontSize:15,cursor:'pointer',color:'#0f172a',listStyle:'none',display:'flex',justifyContent:'space-between',alignItems:'center'}}>Vilka kosttillskott är bäst för seniorer?<span style={{color:'#be185d',fontSize:18,fontWeight:400}}>+</span></summary><p style={{marginTop:12,color:'#475569',lineHeight:1.75,fontSize:14}}>Det beror på individuella behov, men populära val inkluderar omega-3, vitamin D och kalcium. Konsultera alltid en läkare.</p></details>
+        <details style={{borderBottom:'1px solid #e2e8f0',paddingBottom:16,marginBottom:16}} open={false}><summary style={{fontWeight:700,fontSize:15,cursor:'pointer',color:'#0f172a',listStyle:'none',display:'flex',justifyContent:'space-between',alignItems:'center'}}>Vilka är de bästa kosttillskotten för seniorer?<span style={{color:'#be185d',fontSize:18,fontWeight:400}}>+</span></summary><p style={{marginTop:12,color:'#475569',lineHeight:1.75,fontSize:14}}>De bästa kosttillskotten för seniorer inkluderar ofta omega-3, kalcium och vitamin D för att stödja hjärta och benhälsa.</p></details>
       </section>
 
       <section style={{ background:'#f8fafc', borderTop:'1px solid #e2e8f0', padding:'32px 20px', fontFamily:'Inter,sans-serif' }}>
@@ -417,11 +432,11 @@ export default function Home({ providers, year, month, updated }) {
             <div>
               <div style={{ fontWeight:700, color:'#e2e8f0', marginBottom:14, fontSize:12, textTransform:'uppercase', letterSpacing:'0.5px' }}>Jämförelser</div>
               <div style={{ display:'flex', flexDirection:'column', gap:10, fontSize:14 }}>
-                <Link href="/jamfor/seniorwell-vs-goldenhealth" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>SeniorWell vs GoldenHealth</Link>
-                <Link href="/jamfor/seniorwell-vs-silvervital" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>SeniorWell vs SilverVital</Link>
-                <Link href="/jamfor/seniorwell-vs-lifeplus" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>SeniorWell vs LifePlus</Link>
-                <Link href="/jamfor/seniorwell-vs-eldercare-nutrition" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>SeniorWell vs ElderCare Nutrition</Link>
-                <Link href="/jamfor/seniorwell-vs-vitalityplus" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>SeniorWell vs VitalityPlus</Link>
+                <Link href="/jamfor/halsokraft-senior-vs-life-senior-halsa" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Hälsokraft Senior vs Life Senior Hälsa</Link>
+                <Link href="/jamfor/halsokraft-senior-vs-apoteket-senior" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Hälsokraft Senior vs Apoteket Senior</Link>
+                <Link href="/jamfor/halsokraft-senior-vs-eldorado-senior-halsa" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Hälsokraft Senior vs Eldorado Senior Hälsa</Link>
+                <Link href="/jamfor/halsokraft-senior-vs-wellness-senior" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Hälsokraft Senior vs Wellness Senior</Link>
+                <Link href="/jamfor/halsokraft-senior-vs-gron-halsa-senior" style={{color:'#94a3b8',textDecoration:'none',fontSize:13}}>Hälsokraft Senior vs Grön Hälsa Senior</Link>
               </div>
             </div>
           </div>
